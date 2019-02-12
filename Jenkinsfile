@@ -2,15 +2,12 @@ pipeline {
     agent any
     tools {
         gradle 'gradle-3.3.0'
-        jdk 'jdk8'
+        jdk 'JAVA_HOME'
     }
     stages {
         stage ('Initialize') {
             steps {
-				sh '''
-					echo "PATH = ${PATH}"
-					echo "M2_HOME = ${M2_HOME}"
-				'''
+				bat 'echo %JAVA_HOME%'
             }
         }
 
