@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-				bat 'echo %JAVA_HOME%'
+				bat 'echo %GRADLE%'
             }
         }
 
