@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        gradle 'gradle-3.3.0'
+        gradle 'GRADLE'
         jdk 'JAVA_HOME'
     }
     stages {
@@ -14,7 +14,7 @@ pipeline {
         stage ('Build') {
             steps {
 				dir('bdd/demoAndroid'){
-					sh './gradlew clean test' 
+					bat 'gradlew.bat clean test' 
 				}
             }
             post {
