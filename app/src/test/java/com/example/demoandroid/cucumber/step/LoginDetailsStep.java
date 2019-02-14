@@ -12,6 +12,7 @@ import cucumber.api.java.en.When;
 public class LoginDetailsStep {
 
     private UserInfoController infoController = new UserInfoController();
+    private boolean emailValid = false;
 
     @Given("^I start the application$")
     public void i_start_app(){
@@ -31,18 +32,20 @@ public class LoginDetailsStep {
     @And("^I enter valid email (\\S+)$")
     public void i_enter_valid_email(String email){
         if(infoController.checkEmailFormat(email)){
+            emailValid = true;
             System.out.println("Type email: "+ email);
         }else{
-            Assert.fail("Format du mail '"+ email +"' incorrect");
+            System.out.println("Format du mail '"+ email +"' incorrect");
         }
     }
 
     @And("^I enter invalid email (\\S+)$")
     public void i_enter_invalid_email(String email){
         if(infoController.checkEmailFormat(email)){
+            emailValid = true;
             System.out.println("Type email: "+ email);
         }else{
-            Assert.fail("Format du mail '"+ email +"' incorrect");
+            System.out.println("Format du mail '"+ email +"' incorrect");
         }
     }
 
@@ -52,7 +55,7 @@ public class LoginDetailsStep {
     }
 
     @And("^I enter valid password (\\S+)$")
-    public void i_enter_valide_password(String password){
+    public void i_enter_valid_password(String password){
         System.out.println("Type password: "+ password);
     }
 
@@ -63,6 +66,10 @@ public class LoginDetailsStep {
 
     @Then("^I expect to see successful login message$")
     public void i_expect_to_see_successful_login_message(){
-        System.out.println("Show message : Login success");
+        if(emailValid) {
+            System.out.println("Show message : Login success");
+        } else {
+            System.out.println("Show message : Login failed");
+        }
     }
 }
