@@ -1,5 +1,6 @@
 Feature: Enter login details
 
+  @ORPHAN
   Scenario Outline: Successful login
     Given I start the application
     When I click email field
@@ -10,12 +11,13 @@ Feature: Enter login details
     And I close the keyboard
     And I click sign in button
     Then I expect to see successful login message
+    
     Examples:
-      | email        | password |
-      | abov@mail.com | 123456   |
+      | email        | password                    |
+      | abov@mail.com | 123456                     |
       | test@gmail.com | somePassWithVeryLongValue |
 
-
+  @ORPHAN
   Scenario Outline: Failure to login
     Given I start the application
     When I click email field
@@ -26,7 +28,8 @@ Feature: Enter login details
     And I close the keyboard
     And I click sign in button
     Then I expect to see successful login message
+    
     Examples:
-      | email        | password |
-      | ab*v@mail.com | 123456   |
+      | email        | password                  |
+      | ab*v@mail.com | 123456                   |
       | test@gmail.f | somePassWithVeryLongValue |
