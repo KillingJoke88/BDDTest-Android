@@ -1,5 +1,7 @@
 package com.example.demoandroid.cucumber.step;
 
+import org.junit.Assert;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
@@ -37,5 +39,6 @@ public class Step_SeConnecterParDesLogins {
     @Then("je clique sur le bouton connexion")
     public void je_clique_sur_le_bouton_connexion() {
         System.out.println("Je clique sur le bouton de connexion");
+        Assert.fail("FORCER UNE ERREUR");
     }
 }
