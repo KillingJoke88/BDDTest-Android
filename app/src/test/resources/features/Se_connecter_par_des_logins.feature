@@ -1,6 +1,8 @@
-Feature:Se connecter par des logins
+Feature: Se connecter par des logins
+
   L'utilisateur se connecte avec son adresse mail et son mot de passe
 
+  @SSNDRD-4 @OPEN
   Scenario Outline: Identification valide
     Given je suis sur la page de login
     And j ai un compte utilisateur
@@ -10,7 +12,7 @@ Feature:Se connecter par des logins
     And je saisi mon mot de passe <mot_de_passe>
     Then je clique sur le bouton connexion
     
-    Examples: sample data
-      | email         | mot_de_passe             |
-      | "abv@yahoo.fr" | "123456"                |
+    Examples:
+      | email         | mot_de_passe                   |
+      | "abv@yahoo.fr" | "123456"                      |
       | "test@gmail.com" | "somePassWithVeryLongValue" |
