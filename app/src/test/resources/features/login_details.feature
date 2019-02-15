@@ -1,6 +1,6 @@
 Feature: Enter login details
 
-  @SSNDRD-5 @OPEN
+  @ORPHAN
   Scenario Outline: Successful login
     Given I start the application
     When I click email field
