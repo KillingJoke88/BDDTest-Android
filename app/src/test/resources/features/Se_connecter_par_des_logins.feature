@@ -10,7 +10,7 @@ Feature: Se connecter par des logins
     And je saisi mon email <email>
     Then je clique sur la saisie du mot de passe
     And je saisi mon mot de passe <mot_de_passe>
-    Then je clique sur le bouton connexion
+    Then je clique sur le le bouton connexion
     
     Examples:
       | email         | mot_de_passe                   |
