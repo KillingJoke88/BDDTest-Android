@@ -1,6 +1,6 @@
 Feature: nouveau_scenatio
 
-  @ORPHAN
+  @SSNDRD-8 @OPEN
   Scenario: scenario01
     Given nouveau scenario
     And ajout dans GIT
