@@ -1,5 +1,5 @@
 Feature: Nouvelle Feature
 
-  @SSNDRD-3 @OPEN
+  @ORPHAN
   Scenario: scenario_numero_un
     Given ...
