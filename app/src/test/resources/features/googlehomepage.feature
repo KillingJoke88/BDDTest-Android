@@ -2,7 +2,7 @@ Feature: GoogleHomepage
 
   This feature verifies the functionality on Google Homepage
 
-  @ORPHAN
+  @SSNDRD-10 @OPEN
   Scenario: Check that main elements on Google Homepage are displayed
     Given I launch Chrome browser
     When I open Google Homepage
