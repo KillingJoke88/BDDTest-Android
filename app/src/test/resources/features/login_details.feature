@@ -1,6 +1,6 @@
 Feature: Enter login details
 
-  @ORPHAN @successfull_login
+  @ORPHAN
   Scenario Outline: Successful login
     Given I start the application
     When I click email field
