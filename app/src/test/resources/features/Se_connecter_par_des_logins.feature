@@ -2,7 +2,7 @@ Feature: Se connecter par des logins
 
   L'utilisateur se connecte avec son adresse mail et son mot de passe
 
-  @SSNDRD-10 @OPEN
+  @SSNDRD-10 @OPEN @successfull_login
   Scenario Outline: Identification valide
     Given je suis sur la page de login
     And j ai un compte utilisateur
