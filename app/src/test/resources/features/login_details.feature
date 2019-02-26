@@ -17,7 +17,7 @@ Feature: Enter login details
       | abov@mail.com | 123456                     |
       | test@gmail.com | somePassWithVeryLongValue |
 
-  @ORPHAN
+  @SSNDRD-11 @OPEN
   Scenario Outline: Failure to login
     Given I start the application
     When I click email field
